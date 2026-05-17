@@ -48,7 +48,7 @@ training context.
 **Prerequisites:** Python 3.10+, and [Ollama](https://ollama.com) running locally if you want LLM summaries.
 
 ```bash
-git clone https://github.com/yourhandle/KoolAdeOps.git
+git clone https://github.com/tdiprima/KoolAdeOps.git
 cd KoolAdeOps
 pip install -r requirements.txt
 ```
