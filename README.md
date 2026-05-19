@@ -1,4 +1,4 @@
-# KoolAdeOps
+# KoolAdeOps 🥤
 Automated research pipeline that pulls AI and DevSecOps articles from 19 curated sources, scores them for relevance, summarizes them with a local LLM, and delivers a daily Markdown briefing — no subscriptions, no cloud API keys required.
 
 ## Keeping Up Is a Full-Time Job
