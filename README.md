@@ -1,5 +1,5 @@
 # KoolAdeOps 🥤
-Automated research pipeline that pulls AI and DevSecOps articles from 19 curated sources, scores them for relevance, summarizes them with a local LLM, and delivers a daily Markdown briefing — no subscriptions, no cloud API keys required.
+Automated research pipeline that pulls cybersecurity articles from 19 curated sources, scores them for relevance, summarizes them with a local LLM through a cybersecurity analyst lens, and delivers a daily Markdown briefing — no subscriptions, no cloud API keys required.
 
 ## Keeping Up Is a Full-Time Job
 
@@ -7,7 +7,7 @@ The AI security and DevSecOps landscape moves fast. ArXiv drops new papers daily
 
 ## What KoolAdeOps Does
 
-KoolAdeOps runs as a single command. It fetches RSS feeds from 19 sources across academic research, security advisories, community discussion, and vendor blogs. Each article is scored against a curated keyword list covering prompt injection, SBOM, CI/CD pipeline security, LLM vulnerabilities, container security, and more. High-signal articles are stored in a local SQLite database, optionally summarized using a locally running Ollama model (gemma4 by default), and assembled into a structured Markdown briefing. The briefing includes top highlights with relevance scores, articles grouped by category, a 30-day trend tracker, and a source breakdown table. Everything runs locally — no data leaves your machine.
+KoolAdeOps runs as a single command. It fetches RSS feeds from 19 sources across academic research, security advisories, community discussion, and vendor blogs. Each article is scored against a curated keyword list covering prompt injection, SBOM, CI/CD pipeline security, LLM vulnerabilities, container security, and more. High-signal articles are stored in a local SQLite database, optionally summarized using a locally running Ollama model (gemma4 by default) through a cybersecurity analyst lens — focusing on vulnerabilities, threat actors, affected systems, severity, and recommended mitigations. Non-cybersecurity articles are automatically filtered out at the summarization stage. The briefing includes top highlights with relevance scores, articles grouped by category, a 30-day trend tracker, and a source breakdown table. Everything runs locally — no data leaves your machine.
 
 ## Sample Output
 
@@ -24,9 +24,9 @@ Running `python main.py --days 3` produces a file like `briefings/briefing-2026-
 **Source:** ArXiv CS.CR | **Relevance:** 0.74
 
 Researchers found that popular AI code assistants can be manipulated through
-malicious comments in dependencies to generate insecure code. This matters
-because developers often trust AI suggestions without reviewing the underlying
-training context.
+malicious comments in dependencies to generate insecure code. Affects any
+developer using AI-assisted coding tools against untrusted repositories.
+Mitigation: review AI suggestions against source context before accepting.
 
 **Topics:** `prompt injection`, `ai code generation security`, `supply chain`
 
